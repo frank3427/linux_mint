@@ -1,11 +1,10 @@
-# Ansible playbook for your DevOps/SysOps Linux Mint 20.x based workstation
+# Ansible playbook for your DevOps/SysOps Linux Mint 21.x based workstation
 
-[![Build Status](https://travis-ci.org/marcinbojko/linux_mint.svg?branch=master)](https://travis-ci.org/marcinbojko/linux_mint)
 [![Super-Linter](https://github.com/marcinbojko/linux_mint/actions/workflows/01_lint_me.yml/badge.svg)](https://github.com/marcinbojko/linux_mint/actions/workflows/01_lint_me.yml)
 [![Ansible Lint](https://github.com/marcinbojko/linux_mint/actions/workflows/02_ansible_lint.yml/badge.svg)](https://github.com/marcinbojko/linux_mint/actions/workflows/02_ansible_lint.yml)
 <!-- TOC -->
 
-- [Ansible playbook for your DevOps/SysOps Linux Mint 20.x based workstation](#ansible-playbook-for-your-devopssysops-linux-mint-20x-based-workstation)
+- [Ansible playbook for your DevOps/SysOps Linux Mint 21.x based workstation](#ansible-playbook-for-your-devopssysops-linux-mint-21x-based-workstation)
   - [Prerequisites](#prerequisites)
     - [Ansible 2.10 and higher reminder](#ansible-210-and-higher-reminder)
   - [Assumptions](#assumptions)
@@ -13,6 +12,7 @@
     - [Python2 removal](#python2-removal)
   - [Usage](#usage)
   - [Variables](#variables)
+    - [variables for tasks](#variables-for-tasks)
   - [Custom variables, custom variable files](#custom-variables-custom-variable-files)
     - [Custom file content](#custom-file-content)
     - [Custom file example](#custom-file-example)
@@ -25,6 +25,7 @@
     - [Packages: Optional not complete list](#packages-optional-not-complete-list)
     - [Packages: Flatpak](#packages-flatpak)
     - [Packages: npm](#packages-npm)
+  - [Tasks](#tasks)
   - [Startup applications](#startup-applications)
     - [OS Tweaks](#os-tweaks)
   - [Q&A](#qa)
@@ -35,9 +36,9 @@
 
 ## Prerequisites
 
-- installed `Linux Mint` 20.0/20.1/20.2 - all 64-bit, standard options with extra codecs (available as selection during install)
-- for previous versions of Mint - last release supporting `Linux Mint 19` was 2.1.6
-- access to Internet
+- installed `Linux Mint` 21.0/21.1 - all 64-bit, standard options with extra codecs (available as selection during install)
+- for previous versions of Mint (20.x) - last release supporting `Linux Mint 20` was 2.6.1
+- access to internet
 - `openssh-server` installed and running
 - `ansible` in version 2.10 or higher
 - `sudo ansible-galaxy install -r requirements.yml`
@@ -134,7 +135,9 @@ Most variables are stored in `mint19|20.yaml` file. If you need extra settings, 
 |install_flatpak|true|should flatpak packages be installed|
 |install_npm|true|should npm packages be installed|
 |install_vscode_extensions|true|should we install extra vscode extensions|
+|install_steampipe_plugins|true|should we install extra steampipe plugins|
 |install_zsh|false|should we install oh-my-zsh and p10k theme|
+|install_yubico|false|should we install yubico software|
 |install_state|latest|if set to latest, every pass of playbook will also update packages|
 |config_ansible|true|change ansible settings in ansible.cfg|
 |config_dconf|true|change dconf settings|
@@ -146,6 +149,10 @@ Most variables are stored in `mint19|20.yaml` file. If you need extra settings, 
 |reboot_required|false|force reboot even if apt upgrade won't change anything|
 |unpack_folder|/tmp/linux_mint|Which folder to use when downloading and unarchiving|
 |||
+
+### variables for tasks
+
+Are stored in `mint20_tasks.yaml`
 
 ## Custom variables, custom variable files
 
@@ -183,7 +190,6 @@ custom_packages:
 
 - `alexx2000` - Double Commander
 - `ansible` - Ansible - **removed in Linux Mint 20**
-- `asbru-cm` - Asbru Connection Manager
 - `azure-cli` - Azure CLI SDK
 - `docker` - Docker-CE
 - `gcsfuse` - Google Storage gcsfuse - Mount a GCS bucket locally`
@@ -218,7 +224,6 @@ custom_packages:
 - `skype` - Microsoft's communicator
 - `spotify` - Music streaming service
 - `sublime text 3` - Alternative text editor
-- `teams` - Microsoft Teams Linux Client
 - `trivy` - Container security scanner
 - `veeam` - Veeam Agent for Linux
 - `veracrypt` - Device encryption utility
@@ -239,6 +244,7 @@ custom_packages:
 | Balena-etcher |Image Writer| [https://www.balena.io/etcher/](https://www.balena.io/etcher/)|
 | Boostnote | Notes for developers |[https://boostnote.io](https://boostnote.io)|
 | Ctop| Container process monitor | [https://github.com/bcicen/ctop](https://github.com/bcicen/ctop)|
+| Datree|Kubernetes validator |[https://github.com/datreeio/datree](https://github.com/datreeio/datree)|
 | Diodon | Clipboard Manager | [https://launchpad.net/diodon](https://launchpad.net/diodon)|
 | Dive| Docker image explorer | [https://github.com/wagoodman/dive](https://github.com/wagoodman/dive)|
 | Docker/Docker Compose |Docker manager | [https://docs.docker.com/compose/](https://docs.docker.com/compose/)
@@ -255,9 +261,12 @@ custom_packages:
 | Helm | Package manager for Kubernetes |[https://helm.sh/](https://helm.sh/)|
 | k3d |k3d creates containerized k3s clusters|[https://k3d.io/](https://k3d.io/)|
 | k3s |Lightweight Kubernetes 5 less than k8s|[https://k3s.io/](https://k3s.io/)|
+| k9s |Kubernetes CLI Manager|[https://github.com/derailed/k9s](https://github.com/derailed/k9s)|
 | Keepass | Password Manager| [https://keepass.info/](https://keepass.info/)|
+| Kubeconform| Kubernetes config validator|[https://github.com/yannh/kubeconform](https://github.com/yannh/kubeconform)|
+| Kubent| Kubernetes-no-trouble|[https://github.com/doitintl/kube-no-trouble](https://github.com/doitintl/kube-no-trouble)|
 | Kubernetes| Production-Grade Container Orchestration|[https://kubernetes.io/](https://kubernetes.io/)|
-| Kubeval| Kubernetes config validator|[https://github.com/instrumenta/kubeval](https://github.com/instrumenta/kubeval)|
+| Kustomize|Kubernetes customiser |[https://github.com/kubernetes-sigs/kustomize](https://github.com/kubernetes-sigs/kustomize)|
 | Lens| Kubernetes IDE| [https://k8slens.dev/](https://k8slens.dev/)|
 | Minikube | Run Kubernetes locally |[https://github.com/kubernetes/minikube](https://github.com/kubernetes/minikube)|
 | Packer | Image creator |[https://www.packer.io/](https://www.packer.io/)|
@@ -265,6 +274,7 @@ custom_packages:
 | Palemoon | Browser alternative (Java_+Flash)| [https://www.palemoon.org/](https://www.palemoon.org/)
 | Polaris|Validation of best practices in your Kubernetes clusters|[https://www.fairwinds.com/polaris](https://www.fairwinds.com/polaris)|
 | RamboxOS |Multi IM|[https://github.com/TheGoddessInari/hamsket](https://github.com/TheGoddessInari/hamsket)|
+| Rancher Desktop|Rancher Desktop runs Kubernetes and container management on your desktop| [https://rancherdesktop.io/](https://rancherdesktop.io/)|
 | Redshift | Monitor temperature changer| [http://jonls.dk/redshift/](http://jonls.dk/redshift/)|
 | Remmina | Remote Connection Manager |[https://remmina.org/](https://remmina.org/)
 | RKE| Rancher Kubernetes Engine | [https://github.com/rancher/rke](https://github.com/rancher/rke) |
@@ -292,12 +302,12 @@ custom_packages:
 | GIMP | GNU Image Manipulation Program | [https://www.gimp.org/](https://www.gimp.org/)|
 | Insync|Googledrive & Onedrive linux client|[https://www.insynchq.com/](https://www.insynchq.com/)|
 | Kodi | Open Source Home Theater| [https://kodi.tv/](https://kodi.tv/)|
-| Microsoft Teams | IM |[https://www.microsoft.com/en/microsoft-365?omkt=en-US&rtc=1](https://www.microsoft.com/en/microsoft-365?omkt=en-US&rtc=1)|
 | Neofetch |A command-line system information tool written in bash 3.2+| [https://github.com/dylanaraps/neofetch](https://github.com/dylanaraps/neofetch)|
 | PDK/Puppet Agent | Puppet Development Kit | [https://puppet.com/docs/pdk/1.x/pdk.html](https://puppet.com/docs/pdk/1.x/pdk.html)|
 | Pinta | Drawing/Image Editing| [https://pinta-project.com/pintaproject/pinta/](https://pinta-project.com/pintaproject/pinta/)|
 | Skype for Linux | Communicator | [https://www.skype.com](https://www.skype.com)|
 | Spotify | Music Player| [https://www.spotify.com/pl/download/linux/](https://www.spotify.com/pl/download/linux/)|
+| Steampipe| select * from cloud| [https://steampipe.io/](https://steampipe.io/)|
 | Sublime Text 3 | Text Editor | [https://www.sublimetext.com/3](https://www.sublimetext.com/3)
 | Thunderbird | Email client | [https://www.thunderbird.net](https://www.thunderbird.net)|
 | Trivy |A Simple and Comprehensive Vulnerability Scanner for Containers, Suitable for CI|[https://github.com/aquasecurity/trivy](https://github.com/aquasecurity/trivy)
@@ -311,6 +321,7 @@ custom_packages:
 |Software|Type|Link|
 |------------------|--------|---------------------|
 |Postman|The Collaboration Platform for API Development|[https://www.getpostman.com/](https://www.getpostman.com/)|
+|Obsidian|Knowledge base and note seystem|[https://obsidian.md/](https://obsidian.md/)|
 |||
 
 ### Packages: npm
@@ -318,6 +329,15 @@ custom_packages:
 |Software|Type|Link|
 |------------------|--------|---------------------|
 |Dockerfilelint|Dockerfile linter|[https://github.com/replicatedhq/dockerfilelint](https://github.com/replicatedhq/dockerfilelint)|
+|||
+
+## Tasks
+
+|Task|Description|Link|
+|----|-----------|----|
+|install_yubico_software|Install keys, repositories, packages and dekstop files for Yubico infrastructure|[https://yubico.com](https://yubico.com)|
+|configure_zsh|Installs files required by zsh, `oh-my-zsh` and `powerlevel10k`|[https://github.com/ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) [https://github.com/romkatv/powerlevel10k](https://github.com/romkatv/powerlevel10k)|
+|steampipe_plugins.yaml|Install steampipe plugins | [https://steampipe.io/](https://steampipe.io/)|
 |||
 
 ## Startup applications
@@ -372,6 +392,7 @@ Some applications are copied to `autostart` folder
 - add Vagrant plugins
 - manual handle 3rd party deb files - pre-download and re-usage on demand
 - configure neofetch
+- add cloud-tools section, for people to choose cloud they are using
 - ~~better archive handle~~
 - ~~services handling part (by default in Ubuntu/Debian, installed service is set to `enabled/started`)~~
 - ~~more idempotency~~
@@ -396,3 +417,14 @@ Some applications are copied to `autostart` folder
 
 - Playbook exits with a message `Could not import python modules: apt, apt_pkg. Please install python3-apt package`
   - Resolution: set `ansible_python_interpreter=/usr/bin/python3`
+
+- Older distros have problem with some repositories, using PKI part that wasn't part of a ca-certificates.
+  - Resolution: Before continuing you're encouraged to install/upgrade `ca-certificates` package. Playbook is doing that as one of first steps, but this doesn't always works properly.
+- Step `apt_initial_refresh` can fail due to several reasons:
+  - problems with ca-certificates written above
+  - duplicate entries found in `/etc/apt/sources.list.d` files
+  - expired keys/certificates for repositories
+- Step `reset_dconf_values` can fail in Linux Mint 20.x due to python-psutil package being too new.
+- `Insync` package strange behavior.
+  Installing packages can fail as `Insync` ignores entries in it's own insync.list file and adds new ones. This can lead to mutliple sources being added, thus apt is doomed to fail. In rare cases Insync also tries to add new repos codenames before they exist on their side. Currently there is no workaround for this.
+

@@ -1,5 +1,503 @@
 # Changelog "linux_mint"
 
+## Version 2.7.0 [2023-07-09]
+
+* [BREAKING_CHANGE] - removal of Linux Mint 20.x support - last version supporting it will be 2.6.1
+* [BREAKING_CHANGE] - Forticlient Ubuntu repo's key expired - temporarily commented out
+* [APPLICATION] removal `teams` package
+* [REPOSITORY]  removal `ms-teams` repository
+* [APPLICATION] upgraded `amass` to version 3.23.3
+* [APPLICATION] upgraded `angryip` to version 3.9.1
+* [APPLICATION] upgraded `argocd` to version 2.7.7
+* [APPLICATION] upgraded `balena-etcher` to version 1.18.8
+* [APPLICATION] upgraded `datree` to version 1.9.10
+* [APPlICATION] upgraded `dive` to version 0.11.0
+* [APPLICATION] upgraded `docker-compose` to version 2.19.1
+* [APPLICATION] upgraded `dockle` to version 0.4.11
+* [APPLICATION] upgraded `gping` to version 1.13.1
+* [APPLICATION] upgraded `helm` to version 3.12.1
+* [APPLICATION] upgraded `imager` to version 1.7.5
+* [APPLICATION] upgraded `k3d` to version 5.5.1
+* [APPLICATION] upgraded `k3s` to version 1.25.11
+* [APPLICATION] upgraded `k3sup` to version 0.12.13
+* [APPLICATION] upgraded `k9s` to version 0.27.4
+* [APPLICATION] upgraded `kube-bench` to version 0.6.15
+* [APPLICATION] upgraded `kubeconform` to version 0.6.2
+* [APPLICATION] upgraded `kubent` to version nightly-0.7.0-14-gb3e2b3f
+* [APPLICATION] upgraded `kubestr` to version 0.4.37
+* [APPLICATION] upgraded `kustomize` to version 5.1.0
+* [APPLICATION] upgraded `minikube` to version 1.30.1
+* [APPLICATION] upgraded `nerdctl` to version 1.4.0
+* [APPLICATION] upgraded `packer` to version 1.9.1
+* [APPLICATION] upgraded `polaris` to version 8.3.0
+* [APPLICATION] upgraded `rambox` to version 2.1.4
+* [APPLICATION] upgraded `rke` to version 1.4.7
+* [APPLICATION] upgraded `steampipe` to version 0.20.8
+* [APPLICATION] upgraded `syft` to version 0.84.1
+* [APPLICATION] upgraded `tabby` to version 1.0.197
+* [APPLICATION] upgraded `terraform` to version 1.5.2
+* [APPLICATION] upgraded `tflint` to version 0.47.0
+* [APPLICATION] upgraded `vagrant` to version 2.3.8
+* [APPLICATION] upgraded `vault` to version 1.14.0
+* [APPLICATION] upgraded `zoom` to version 5.15.2.4260
+* [VSCODE] added `ecmel.vscode-html-css`
+* [VSCODE] added `github.vscode-github-actions`
+* [VSCODE] added `ms-dotnettools.vscode-dotnet-runtime`
+* [VSCODE] added `ms-python.isort`
+* [VSCODE] added `ms-python.vscode-pylance`
+* [VSCODE] added `ms-vscode-remote.remote-server`
+* [VSCODE] added `ms-vscode.remote-explorer`
+* [VSCODE] added `redhat.java`
+* [VSCODE] added `Tim-Koehler.helm-intellisense`
+
+## Version 2.6.1 [2023-02-05]
+
+* [VSCODE] removed obsoleted extensions `ms-vsliveshare.vsliveshare-audio` - [https://github.com/MicrosoftDocs/live-share/issues/4826](https://github.com/MicrosoftDocs/live-share/issues/4826)
+* [APPLICATION] removed `google-cloud-sdk-skaffold`
+* [APPLICATION] upgraded `datree` to version 1.8.21
+* [APPLICATION] upgraded `gping` to version 1.8.0
+* [APPLICATION] upgraded `k3d` to version 5.4.7
+* [APPLICATION] upgraded `k3s` to version 1.23.16
+* [APPLICATION] upgraded `k9s` to version 0.27.2
+* [APPLICATION] upgraded `kse` to version 5.5.2
+* [APPLICATION] upgraded `kustomize` to version 5.0.0
+* [APPLICATION] upgraded `minikube` to version 1.29.0
+* [APPLICATION] upgraded `nerdctl` to version 1.2.0
+* [APPLICATION] upgraded `rke` to version 1.4.2
+* [APPLICATION] upgraded `steampipe` to version 0.18.4
+* [APPLICATION] upgraded `syft` to version 0.70.0
+* [APPLICATION] upgraded `zoom` to version 5.13.5.431
+* [APPLICATION] upgraded `argocd` to version 2.5.10
+
+## Version 2.6.0 [2023-01-21]
+
+* [MINT] Support for Linux Mint 21.0 `Veronica` and 21.1 `Vera`
+* [APPLICATION] lens is now in `packages_optional` section
+* [APPLICATION] upgraded `argocd` to version 2.5.6
+* [APPLICATION] upgraded `balena-etcher` to version 1.14.3
+* [APPLICATION] upgraded `datree` to version 1.8.14
+* [APPLICATION] upgraded `docker-compose` to version 2.15.1
+* [APPLICATION] upgraded `dockle` to version 0.4.10
+* [APPLICATION] upgraded `gping` to version 1.7.0
+* [APPLICATION] upgraded `helm` to version 3.11.0
+* [APPLICATION] upgraded `kubent` to version nightly-0.7.0-9
+* [APPLICATION] upgraded `lens` to release 2023.1.110749
+* [APPLICATION] upgraded `polaris` to version 7.3.0
+* [APPLICATION] upgraded `steampipe` to version 1.18.1
+* [APPLICATION] upgraded `syft` to version 0.68.0
+* [APPLICATION] upgraded `tabby` to version 1.0.188
+* [FLATPAK] added `com.bitwarden.desktop` - Bitwarden's client
+* [KEYS] added `lens` key
+* [KEYS] changed `spotify` key to 7A3A762FAFD4A51F
+* [KEYS] removed `spotify` obsoleted key 5E3C45D7B312C643
+* [REPOSITORY] added `lens` repository
+* [VSCODE] removed obsoleted extension `ms-vsliveshare.vsliveshare-pack` - [https://marketplace.visualstudio.com/itemdetails?itemName=MS-vsliveshare.vsliveshare-pack](https://marketplace.visualstudio.com/itemdetails?itemName=MS-vsliveshare.vsliveshare-pack)
+
+## Version 2.5.4 [2023-01-02]
+
+* [BREAKING_CHANGE] - switch some repositories from http to https in `/etc/apt/sources.list.d`
+
+  from (example)
+
+  ```ini
+  deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  ```
+
+  to
+
+  ```ini
+  deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
+  ```
+
+  Please, be aware that you have to clean doubles manually, as this playbook will probably fail when doubles are found.
+* [BREAKING_CHANGE] - switch packages: dotnet-sdk and dotnet-runtime to version 7
+
+  ```yaml
+  - dotnet-runtime-7.0
+  - dotnet-sdk-7.0
+  ```
+
+* [APPLICATION] upgraded `argocd` to version 2.5.5
+* [APPLICATION] upgraded `datree` to version 1.8.12
+* [APPLICATION] upgraded `docker-compose` to version 2.14.2
+* [APPLICATION] upgraded `helm` to version 3.10.3
+* [APPLICATION] upgraded `k3s` to version 1.23.15
+* [APPLICATION] upgraded `k3sup` to version 0.12.12
+* [APPLICATION] upgraded `k9s` to version 0.26.7
+* [APPLICATION] upgraded `kube-bench` to version 0.6.10
+* [APPLICATION] upgraded `kubent` to version nightly-0.7.0-2-g00f8453
+* [APPLICATION] upgraded `kubestr` to version 0.4.36
+* [APPLICATION] upgraded `lens` to version 6.3.0
+* [APPLICATION] upgraded `minikube` to version 1.28.0
+* [APPLICATION] upgraded `nerdctl` to version 1.1.0
+* [APPLICATION] upgraded `polaris` to version 7.2.0
+* [APPLICATION] upgraded `rke` to version 1.4.1
+* [APPLICATION] upgraded `vagrant` to version 2.3.3
+* [APPLICATION] upgraded `amass` to version 3.21.2
+* [APPLICATION] upgraded `angryip` to version 3.9.0
+* [APPLICATION] upgraded `dockle` to version 0.4.9
+* [APPLICATION] upgraded `balena-etcher` to version 1.12.7
+* [APPLICATION] upgraded `gping` to version 1.6.3
+* [APPLICATION] upgraded `hadolint` to version 2.12.0
+* [APPLICATION] upgraded `packer` to version 1.8.5
+* [APPLICATION] upgraded `rambox` to version 2.0.9
+* [APPLICATION] upgraded `rbpi-imager` to version 1.7.3
+* [APPLICATION] upgraded `steampipe` to version 0.17.4
+* [APPLICATION] upgraded `syft` to version 0.64.0
+* [APPLICATION] upgraded `tabby` to version 1.0.187
+* [APPLICATION] upgraded `terraform` to version 1.3.6
+* [APPLICATION] upgraded `terragrunt` to version 0.42.5
+* [APPLICATION] upgraded `tflint` to version 0.44.1
+* [APPLICATION] upgraded `tfsec` to version 1.28.1
+* [APPLICATION] upgraded `vagrant` to version 2.3.4
+* [APPLICATION] upgraded `vault` to version 1.12.2
+* [APPLICATION] upgraded `zoom` to version 5.13.3.651
+* [APPLICATION] removal of `k6`
+* [REPOSITORY] removal of `k6`
+
+## Version 2.5.3 [2022-09-03]
+
+* [BREAKING_CHANGE] removal of `hamsket` package
+* [BREAKING_CHANGE] upgraded `docker-compose` binary from v1 to v2 branch, version 2.10.2
+* [APPLICATION] upgraded `argocd` to version 2.4.11
+* [APPLICATION] upgraded `datree` to version 1.6.13
+* [APPLICATION] upgraded `helm`  to version 3.9.4
+* [APPLICATION] upgraded `k3d` to version 5.4.6
+* [APPLICATION] upgraded `k3s` to version 1.23.10
+* [APPLICATION] upgraded `k3sup` to version 0.12.3
+* [APPLICATION] upgraded `kubent` to version nightly-0.5.1-42-ga65f727
+* [APPLICATION] upgraded `kubestr` to version 0.4.35
+* [APPLICATION] upgraded `polaris` to version 7.0.2
+* [APPLICATION] upgraded `rke` to version 1.3.14
+* [APPLICATION] upgraded `steampipe` to version 0.16.1
+* [APPLICATION] upgraded `syft` to version 0.55.0
+* [APPLICATION] upgraded `terraform` to version 1.2.8
+* [APPLICATION] upgraded `terragrunt` to version 0.38.9
+* [APPLICATION] upgraded `tfsec` to version 1.27.6
+* [APPLICATION] upgraded `vault` to version 1.11.3
+* [APPLICATION] upgraded `zoom` to version 5.11.10.4400
+* [APPLICATION] added `rambox` in version 2.0.6
+
+## Version 2.5.2 [2022-08-19]
+
+* [APPLICATION] added `steampipe` [https://github.com/turbot/steampipe](https://github.com/turbot/steampipe)
+* [TASKS] added task `steampipe_plugins` for extra `steampipe` plugins install
+* [APPLICATION] upgraded `argocd` to version 2.4.9
+* [APPLICATION] upgraded `datree` to version 1.6.6
+* [APPLICATION] upgraded `dockle` to version 0.4.6
+* [APPLICATION] upgraded `helm`  to version 3.9.3
+* [APPLICATION] upgraded `k3s` to version 1.23.9
+* [APPLICATION] upgraded `k9s` to version 0.26.3
+* [APPLICATION] upgraded `kube-bench` to version 0.6.9
+* [APPLICATION] upgraded `kustomize` to version 4.5.7
+* [APPLICATION] upgraded `lens` to version 6.0.1
+* [APPLICATION] upgraded `minikube` to version 1.26.1
+* [APPLICATION] upgraded `nerdctl` to version 0.22.2
+* [APPLICATION] upgraded `rambox-os` to version 0.6.5-nightly
+* [APPLICATION] upgraded `rke` to version 1.3.13
+* [APPLICATION] upgraded `syft` to version 0.54.0
+* [APPLICATION] upgraded `tabby` to version 1.0.183
+* [APPLICATION] upgraded `terraform` to version 1.2.7
+* [APPLICATION] upgraded `terragrunt` to version 0.38.7
+* [APPLICATION] upgraded `tflint` to version 0.39.3
+* [APPLICATION] upgraded `tfsec` to version 1.27.1
+* [APPLICATION] upgraded `vagrant` to version 2.3.0
+* [APPLICATION] upgraded `vault` to version 1.11.2
+* [VSCODE] changed renamed extension `wholroyd.hcl` to `hashicorp.hcl`
+* [VSCODE] added extension `bierner.markdown-mermaid`
+* [VSCODE] added extension `Kelvin.vscode-sshfs`
+
+## Version 2.5.1 [2022-07-17]
+
+* [APPLICATION] upgraded `nerdctl` to version 0.22.0
+* [APPLICATION] upgraded `datree` to version 1.5.30
+* [APPLICATION] upgraded `helm`  to version 3.9.1
+* [APPLICATION] upgraded `k3d` to version 5.4.4
+* [APPLICATION] upgraded `kubeconform` to version 0.4.14
+* [APPLICATION] upgraded `kubent` to version `nightly-0.5.1-23-g73fb3a7`
+* [APPLICATION] upgraded `kubestr` to version 0.4.34
+* [APPLICATION] upgraded `polaris` to version 7.0.1
+* [APPLICATION] upgraded `syft` to version 0.51.0
+* [APPLICATION] upgraded `terraform` to version 1.2.5
+* [APPLICATION] upgraded `tfsec` to version 1.26.3
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.11664
+
+## Version 2.5.0 [2022-07-02]
+
+* [APPLICATION] upgraded `nerdctl` to version 0.21.0
+* [APPLICATION] upgraded `k3d` to version 5.4.3
+* [APPLICATION] upgraded `k3s` to version 1.23.8
+* [APPLICATION] upgraded `k3sup` to version 0.12.0
+* [APPLICATION] upgraded `k9s` to version 0.25.21
+* [APPLICATION] upgraded `kubeconform` to version 0.4.13
+* [APPLICATION] added `kubent` [https://github.com/doitintl/kube-no-trouble](https://github.com/doitintl/kube-no-trouble)
+* [APPLICATION] upgraded `kubestr` to version 0.4.33
+* [APPLICATION] upgraded `lens` to version 5.5.4
+* [APPLICATION] upgraded `minikube` to version 1.26.0
+* [APPLICATION] upgraded `rke` to version 1.3.12
+* [APPLICATION] upgraded `amass` to version 3.19.3
+* [APPLICATION] upgraded `gping` to version 1.3.2
+* [APPLICATION] upgraded `packer` to version 1.8.2
+* [APPLICATION] upgraded `syft` to version 0.49.0
+* [APPLICATION] upgraded `tabby` to version 1.0.181
+* [APPLICATION] upgraded `terraform` to version 1.2.4
+* [APPLICATION] upgraded `tflint` to version 0.38.1
+* [APPLICATION] upgraded `tfsec` to version 1.26.0
+* [APPLICATION] upgraded `vault` to version 1.11.0
+* [APPLICATION] added `datree` [https://github.com/datreeio/datree](https://github.com/datreeio/datree)
+* [APPLICATION] upgraded `zoom` to version 5.11.1.3595
+
+## Version 2.4.10 [2022-05-22]
+
+* [APPLICATION] upgraded `nerdctl` to version 0.20.0
+* [APPLICATION] upgraded `helm` to version 3.9.0
+* [APPLICATION] upgraded `kustomize` to version 4.5.5
+* [APPLICATION] upgraded `syft` to version 0.46.1
+* [APPLICATION] upgraded `terraform` to version 1.2.0
+* [APPLICATION] upgraded `tfsec` to version 1.21.2
+* [APPLICATION] upgraded `argocd` to version 3.3.4
+
+## Version 2.4.9 [2022-05-14]
+
+* [PIP] added `terraform-compliance` [https://terraform-compliance.com/pages/installation/pip.html](https://terraform-compliance.com/pages/installation/pip.html)
+* [APPLICATION] added `k9s` [https://github.com/derailed/k9s](https://github.com/derailed/k9s)
+* [APPLICATION] upgraded `k3s` to version 1.21.12
+* [APPLICATION] upgraded `kube-bench` to version 0.6.8
+* [APPLICATION] upgraded `polaris` to version 6.0.0
+* [APPLICATION] upgraded `rke` to version 1.3.11
+* [APPLICATION] upgraded `syft` to version 0.46.0
+* [APPLICATION] upgraded `terragrunt` to version 0.36.12
+* [APPLICATION] upgraded `tflint` to version 0.36.2
+* [APPLICATION] upgraded `tfsec` to version 1.21.0
+* [APPLICATION] upgraded `vault` to version 1.10.3
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.10976
+* [APPLICATION] upgraded `zoom` to version 5.10.4.2845
+
+## Version 2.4.8 [2022-04-24]
+
+* [APPLICATION] upgraded `nerdctl` to version 0.19.0
+* [APPLICATION] upgraded `helm` to version 3.8.2
+* [APPLICATION] upgraded `k3s` to version 1.21.11
+* [APPLICATION] upgraded `kube-bench` to version 0.6.7
+* [APPLICATION] upgraded `lens` to version 5.4.6
+* [APPLICATION] upgraded `polaris` to version 5.2.
+* [APPLICATION] upgraded `rke` to version 1.3.9
+* [APPLICATION] upgraded `amass` to version 3.19.2
+* [APPLICATION] upgraded `balena-etcher` to version 1.7.9
+* [APPLICATION] upgraded `syft` to version 0.44.1
+* [APPLICATION] upgraded `zoom` to version 5.10.3.2778
+* [APPLICATION] upgraded `tabby` to version 1.0.176
+* [APPLICATION] upgraded `terraform` to version 1.1.9
+* [APPLICATION] upgraded `tfsec` 1.18.0
+* [APPLICATION] upgraded `vault` to version 1.10.1
+* [APPLICATION] upgraded `minikube` to version 1.25.2
+* [APPLICATION] added `argocd` [https://github.com/argoproj/argo-cd](https://github.com/argoproj/argo-cd)
+* [APPLICATION] remove `zenmap` as deb package
+* [APPLICATION] remove `python-gtk2` as needed dependency for `zenmap` deb package
+* [FLATPAK] added `zenmap` as flatpak
+* fixed `yubico-stable-focal.list` being misnamed as `yubico-stable-foca.list`
+
+## Version 2.4.7 [2022-04-03]
+
+* [APPLICATION] upgraded `syft` to version 0.43.0
+* [APPLICATION] upgraded `zoom` to version 5.10.0.2450
+* [APPLICATION] upgraded `amass` to version 3.19.1
+* [APPLICATION] upgraded `hadolint` to version 2.10.0
+* [APPLICATION] upgraded `tfsec` to version 1.15.4
+* [APPLICATION] added `kustomize` [https://github.com/kubernetes-sigs/kustomize](https://github.com/kubernetes-sigs/kustomize)
+
+## Version 2.4.6 [2022-03-30]
+
+* [APPLICATION] added `krew` [https://github.com/kubernetes-sigs/krew](https://github.com/kubernetes-sigs/krew)
+* [APPLICATION] added `k3sup` [https://github.com/alexellis/k3sup](https://github.com/alexellis/k3sup)
+* [APPLICATION] added `nerdctl` [https://github.com/containerd/nerdctl](https://github.com/containerd/nerdctl). remember to at least have [https://github.com/containernetworking/plugins](https://github.com/containernetworking/plugins)
+* [APPLICATION] upgraded `k3d` to version 5.4.1
+* [APPLICATION] upgraded `lens` to version 5.4.4
+* [APPLICATION] upgraded `polaris` to version 5.1.0
+* [APPLICATION] upgraded `rke` to version 1.3.8
+* [APPLICATION] upgraded `amass` to version 3.19.0
+* [APPLICATION] upgraded `ctop` to version 0.7.7
+* [APPLICATION] upgraded `balena-etcher` to version 1.7.8
+* [APPLICATION] upgraded `gping` to version 1.3.1
+* [APPLICATION] upgraded `hadolint` to version 2.9.3
+* [APPLICATION] upgraded `rbpi-imager` to version 1.7.2
+* [APPLICATION] upgraded `syft` to version 0.42.4
+* [APPLICATION] upgraded `tabby` to version 1.0.174
+* [APPLICATION] upgraded `terragrunt` to version 0.36.6
+* [APPLICATION] upgraded `tflint` to version 0.35.0
+* [APPLICATION] upgraded `tfsec` to version 0.15.1
+* [APPLICATION] upgraded `vault` to version 1.10.0
+
+## Version 2.4.5 [2022-03-13]
+
+* [APPLICATION] added `kubestr` - Kubernetes storage evaluator [https://github.com/kastenhq/kubestr](https://github.com/kastenhq/kubestr)
+* [APPLICATION] upgraded `packer` to version 1.8.0
+* [APPLICATION] upgraded `helm` to version 3.8.1
+* [APPLICATION] upgraded `k3d` to version 5.3.0
+* [APPLICATION] upgraded `k3s` to version 1.21.10+k3s1
+* [APPLICATION] upgraded `kubeconform` to version 0.4.13
+* [APPLICATION] upgraded `lens` to version 5.4.1
+* [APPLICATION] upgraded `minikube` to version 1.25.2
+* [APPLICATION] upgraded `polaris` to version 5.0.1
+* [APPLICATION] upgraded `rke` to version 1.3.7
+* [APPLICATION] upgraded `amass` to version 3.17.1
+* [APPLICATION] upgraded `dockle` to version 0.4.5
+* [APPLICATION] upgraded `balena-etcher` to version 1.7.7
+* [APPLICATION] upgraded `gping` to version 1.3.0
+* [APPLICATION] upgraded `rbpi-imager` to version 1.7.1
+* [APPLICATION] upgraded `syft` to version 0.41.4
+* [APPLICATION] upgraded `tabby` to version 1.0.173
+* [APPLICATION] upgraded `terraform` to version 1.1.7
+* [APPLICATION] upgraded `terragrunt` to version 0.36.3
+* [APPLICATION] upgraded `tfsec` to version 1.8.0
+* [APPLICATION] upgraded `vault` to version 1.9.4
+
+## Version 2.4.4 [2022-02-01]
+
+* [APPLICATION] added `skaffold` [https://skaffold.dev/](https://skaffold.dev/)
+* [REPOSITORY] added repository for `Rancher Desktop` [https://docs.rancherdesktop.io/installation/#linux](https://docs.rancherdesktop.io/installation/#linux)
+* [KEY] added key for `Rancher Desktop` repository [https://docs.rancherdesktop.io/installation/#linux](https://docs.rancherdesktop.io/installation/#linux)
+* [APPLICATION] upgraded `k3s` to version 1.21.9
+* [APPLICATION] upgraded `lens` to version 5.3.4
+* [APPLICATION] upgraded `minikube` to version 1.25.1
+* [APPLICATION] upgraded `polaris` to version 5.0.0
+* [APPLICATION] upgraded `rke` to version 1.3.6
+* [APPLICATION] upgraded `amass` to version 3.16.0
+* [APPLICATION] upgraded `angryip` to version 3.8.2
+* [APPLICATION] upgraded `gping` to version 1.2.7
+* [APPLICATION] upgraded `kse` to version 5.5.1
+* [APPLICATION] upgraded `packer` to version 1.7.9
+* [APPLICATION] upgraded `terraform` to version 1.1.4
+* [APPLICATION] upgraded `vault` to version 1.9.3
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.10920
+* [APPLICATION] upgraded `syft` to version 0.36.0
+* [APPLICATION] upgraded `terragrunt` to version 0.36.1
+* [APPLICATION] upgraded `tabby` to version 1.0.170
+* [APPLICATION] added `tfsec` from Aquasecurity: [https://github.com/aquasecurity/tfsec](https://github.com/aquasecurity/tfsec)
+* [FLATPAK] added `easyeffects` - [https://flathub.org/apps/details/com.github.wwmm.easyeffects](https://flathub.org/apps/details/com.github.wwmm.easyeffects)
+
+## Version 2.4.3 [2022-01-14]
+
+* [VARIABLE] `install_yubico` set to false on default
+* Updated documentation
+
+## Version 2.4.2 [2022-01-14]
+
+* **BREAKING_CHANGES**
+  * [REPOSITORY] removed `asbru-cm` repository
+  * [KEYS] removed `asbru-cm` key
+  * [PACKAGES] removed `asbru-cm` package
+  * [PACKAGES] removed obsidian in .deb form
+* [VSCODE] added `GitLab.gitlab-workflow` extension
+* [TASKS] added `install_yubico_software` task for Yubico
+  * [KEYS] added `32CBA1A9` for [https://support.yubico.com/](https://support.yubico.com/)
+  * [REPOSITORY] added `ppa:yubico/stable`
+  * [PACKAGES] added `yubikey-manager`,`yubikey-personalization-gui`,`libpam-yubico`,`libpam-u2f`
+  * [PACKAGES] added `yubioath` as AppImage
+  * [PACKAGES] added `yubikey-manager` as AppImage
+* [APPLICATION] upgraded `kube-bench` to version 0.6.6
+* [APPLICATION] upgraded `rke` to version 1.3.4
+* [APPLICATION] upgraded `syft` to version 0.35.1
+* [APPLICATION] upgraded `terraform` to version 1.1.3
+* [APPLICATION] upgraded `terragrunt` to version 0.35.19
+* [FLATPAK] added `obsidian` package in a form of flatpak
+
+## Version 2.4.1 [2022-01-04] - Birthday Edition
+
+* [IMAGE] Image by `Pexels` from `Pixabay`
+
+![Birthday](./images/birthday-1835443_640.jpg)
+
+* [APPLICATION] added `zoom` as `deb` package in version 5.9.1 (1380)
+* [KEYS] added `zoom` key - [https://zoom.us/linux/download/pubkey](https://zoom.us/linux/download/pubkey)
+* [APPLICATION] upgrade `etcher` to version 1.7.3
+* [APPLICATION] upgrade `tflint` to version 0.34.1
+* [PIP] added `oci-cli` for `Oracle Cloud Infrastructure`
+
+## Version 2.4.0 [2021-12-24] - Christmas Edition
+
+           *             ,
+                       _/^\_
+                      <     >
+     *                 /.-.\         *
+              *        `/&\`                   *
+                      ,@.*;@,
+                     /_o.I %_\    *
+        *           (`'--:o(_@;
+                   /`;--.,__ `')             *
+                  ;@`o % O,*`'`&\
+            *    (`'--)_@ ;o %'()\      *
+                 /`;--._`''--._O'@;
+                /&*,()~o`;-.,_ `""`)
+     *          /`,@ ;+& () o*`;-';\
+               (`""--.,_0 +% @' &()\
+               /-.,_    ``''--....-'`)  *
+          *    /@%;o`:;'--,.__   __.'\
+              ;*,&(); @ % &^;~`"`o;@();         *
+              /(); o^~; & ().o@*&`;&%O\
+        jgs   `"="==""==,,,.,="=="==="`
+           __.----.(\-''#####---...___...-----._
+         '`         \)_`"""""`
+                 .--' ')
+               o(  )_-\
+                 `"""` `
+
+------------------------------------------------
+
+This ASCII pic can be found at [https://asciiart.website/index.php?art=holiday/christmas/trees](https://asciiart.website/index.php?art=holiday/christmas/trees)
+
+* [APPLICATION] upgraded `helm` to version 3.7.2
+* [APPLICATION] upgraded `k3d` to version 5.2.2
+* [APPLICATION] upgraded `k3s` to version 1.21.8
+* [APPLICATION] upgraded `lens` to version 5.3.3
+* [APPLICATION] upgraded `rke` to vesion 1.3.3
+* [APPLICATION] upgraded `balena-etcher` to version 1.7.2
+* [APPLICATION] upgraded `kse` to version 5.5.0
+* [APPLICATION] upgraded `tabby` to version 1.0.169
+* [APPLICATION] upgraded `terraform` to version 1.1.2
+* [APPLICATION] upgraded `tflint` to version 0.34.0
+* [APPLICATION] upgraded `vault` to version 1.9.2
+* [APPLICATION] upgraded `terragrunt` to version 0.35.16
+* [APPLICATION] upgraded `packetsender` to version 7.2.4
+* [APPLICATION] added `syft` in version 0.34.0 [https://github.com/anchore/syft](https://github.com/anchore/syft)
+* [APPLICATION] added `obsidian` in version 0.12.15 [https://obsidian.md/](https://obsidian.md/)
+* [APPLICATION] removed `boostnote` as being obsoleted. Since `Boostnote-next.local` and `Boostnote-next` development is not in a good shape, I recommend switching to `obsidian` or `joplin`
+
+## Version 2.3.0 [2021-12-04]
+
+* [APPLICATION] upgraded `helm` to version 3.7.1
+* [APPLICATION] upgraded `k3d` to version 5.2.0
+* [APPLICATION] upgraded `k3s` to version 1.21.7
+* [APPLICATION] upgraded `kube-bench` to version 0.6.5
+* [APPLICATION] upgraded `lens` to version 5.3.2
+* [APPLICATION] upgraded `minikube` to version 1.24.0
+* [APPLICATION] upgraded `polaris` to version 4.2.0
+* [APPLICATION] upgraded `rke` to vesion 1.3.2
+* [APPLICATION] upgraded `amass` to version 3.15.2
+* [APPLICATION] upgraded `dockle` to version 0.4.3
+* [APPLICATION] upgraded `balena-etcher` to version 1.7.1
+* [APPLICATION] upgraded `gping` to version 1.2.6
+* [APPLICATION] upgraded `hadolint` to version 2.8.0
+* [APPLICATION] upgraded `packer` to version 1.7.8
+* [APPLICATION] upgraded `tabby` to version 1.0.164
+* [APPLICATION] upgraded `terraform` to version 1.0.11
+* [APPLICATION] upgraded `terragrunt` to version 0.35.13
+* [APPLICATION] upgraded `tflint` to version 0.33.1
+* [APPLICATION] upgraded `vagrant` to version 2.2.19
+* [APPLICATION] upgraded `vault` to version 1.9.0
+* [APPLICATION] added `bicep` for Azure
+* [VSCODE] added `trivy-vulnerability-scanner` extension
+* [VSCODE] added `donjayamanne.githistory` extension
+* [VSCODE] added `eamodio.gitlens` extension
+* [VSCODE] added `rogalmic.bash-debug` extension
+* [VSCODE] added `redhat.vscode-commons` extension
+* [VSCODE] removed `jpogran.puppet-vscode` extension
+* [VSCODE] added `puppet.puppet-vscode` extension
+* [VSCODE] added `ms-azuretools.vscode-bicep` extension
+* [KEYS] added new `spotify` key `5E3C45D7B312C643`
+* [KEYS] added new `nodesource` key
+* [REPOSITORY] added Node.js 16.x repository - [https://deb.nodesource.com/node_16.x](https://deb.nodesource.com/node_16.x)
+
 ## Version 2.2.9 [2021-09-26]
 
 * [APPLICATION] upgraded `kubeconform` to version 0.4.11
@@ -55,7 +553,7 @@
 * [APPLICATION] upgraded `tflint` to version 0.31.0
 * [APPLICATION] upgraded `vagrant` to vesion 2.2.18
 * [APPLICATION] upgraded `vault` to version 1.8.1
-* [APPLICATION] upgraded `wpsoffice` to version 11.1.0.10702
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.10702
 * [APPLICATION] added `ngrok` - in version 2.3.40 [https://ngrok.com/](https://ngrok.com/)
 
 ## Version 2.2.6 [2021-07-04]
@@ -192,7 +690,7 @@
 * [APPLICATION] upgraded `terminus-alfa` to version 1.0.134
 * [APPLICATION] upgraded `terraform` to version 0.14.7
 * [APPLICATION] upgraded `tflint` to version 0.24.1
-* [APPLICATION] upgraded `wpsoffice` to version 11.1.0.10161
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.10161
 * Prepared for `ansible-lint` in version 5.x
 
 ## Version 2.1.5 [2021-01-31]
@@ -274,7 +772,7 @@
 * [APPLICATION] upgraded `terraform` to version 1.13.5
 * [APPLICATION] upgraded `tflint` to version 0.20.3
 * [APPLICATION] upgraded `vault` to version 1.5.5
-* [APPLICATION] upgraded `wpsoffice` to version 11.1.0.9719
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.9719
 * [APPLICATION] upgraded `ctop` to version 0.7.4
 
 ## Version 2.0.9 [2020-10-18]
@@ -652,7 +1150,7 @@
 * [APPLICATION] added `packetsender` in version 6.2.3 [https://packetsender.com/](https://packetsender.com/)
 * [APPLICATION] upgraded `minikube` to version 1.4.0
 * [APPLICATION] added `whois`
-* [APPLICATION] upgraded `wps Office` to version 11.1.0.8865
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.8865
 * [APPLICATION] upgraded `franz` to version 5.3.3
 
 ## Version 1.2.1 2019-08-24
@@ -688,7 +1186,7 @@
 
 ## Version 1.1.9 2019-07-26
 
-```txt
+```text
  _____             ___      _           _       _      ______
 /  ___|           / _ \    | |         (_)     ( )     |  _  \
 \ `--. _   _ ___ / /_\ \ __| |_ __ ___  _ _ __ |/ ___  | | | |__ _ _   _
@@ -706,7 +1204,7 @@
 ```
 
 * [REPOSITORY] added `trivy` repository and key [https://github.com/knqyf263/trivy#debianubuntu](https://github.com/knqyf263/trivy#debianubuntu)
-* [APPLICATION] upgraded `WPS Office for Linux` to version 11.1.0.8722
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.8722
 * [APPLICATION] upgraded `helm` to version 2.14.2
 * [APPLICATION] upgraded `terraform` to version 0.12.5
 * [GLOBAL_ENV] added section in variables.yml for adding global environments in /etc/environment
@@ -770,7 +1268,7 @@
 ## Version 1.1.3 2019-04-30
 
 * [APPLICATION] upgraded `terminus alpha` to version 1.0.76
-* [APPLICATION] upgraded `WPS office` to version 11.1.0.8392
+* [APPLICATION] upgraded `wps-office` to version 11.1.0.8392
 * [APPLICATION] upgraded `Franz` to version 5.0.1
 * [APPLICATION] upgraded `minikube` to version 1.0.1
 * [APPLICATION] downgrade `rke` to version 0.1.18 as 0.2.x branch is too unstable
@@ -781,7 +1279,7 @@
 ## Version 1.1.2 2019-03-27
 
 * [APPLICATION] upgraded `terraform` to version 0.11.13
-* [APPLICATION] upgraded `WPS Ofice` to version 10.1.0.6758
+* [APPLICATION] upgraded `wps-office` to version 10.1.0.6758
 * [APPLICATION] upgraded `helm` to version 2.13.1
 * [APPLICATION] upgraded `vault` to version 1.1.0
 * [APPLICATION] upgraded `rancher` to version 2.2.0
@@ -862,7 +1360,6 @@
 
 ## Version 1.0.5 - 2018-12-23 Christmas Edition
 
-```txt
              *
            _/ \_
           \     /
@@ -878,7 +1375,6 @@
     *------------------*
          [_______]
           \_____/
-```
 
 * [REPOSITORY] - added `ppa:mozillateam/ppa`
 * [APPLICATION] - upgrade `Franz` to version 5.0.0-beta22
@@ -935,7 +1431,7 @@
 ## Version 0.8.5 - 2018-11-21
 
 * [APPLICATION] added `Team Viewer` to external applications
-* [APPLICATION] added `WPS Office` to external applications
+* [APPLICATION] added `wps-office` to external applications
 * added packages:
   * network-manager-fortisslvpn
   * openfortivpn

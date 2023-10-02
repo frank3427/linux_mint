@@ -1,135 +1,145 @@
-# Mint 20 variables file
+# Mint 21 variables file
 ---
 ansible_python_interpreter: /usr/bin/python3
-codename: focal
+codename: jammy
 # repositories we'd like to add - mandatory
 repositories:
-- repo: deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_20.04/ /
+- repo: deb http://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_22.04/ /
   filename: alexx2000
-- repo: deb https://packagecloud.io/asbru-cm/asbru-cm/ubuntu/ focal main
-  filename: asbru-cm
-- repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ focal main
+- repo: deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ jammy main
   filename: azure-cli
-- repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable
+- repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu jammy stable
   filename: docker-stable
-- repo: deb http://packages.cloud.google.com/apt gcsfuse-focal main
+- repo: deb https://packages.cloud.google.com/apt gcsfuse-jammy main
   filename: gcsfuse
-- repo: ppa:gezakovacs/ppa
-  filename: gezakovacs
-- repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+- repo: deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main
   filename: google-chrome
-- repo: deb http://packages.cloud.google.com/apt cloud-sdk main
+- repo: deb https://packages.cloud.google.com/apt cloud-sdk main
   filename: google-cloud-sdk
-- repo: deb http://apt.kubernetes.io/ kubernetes-xenial main
+- repo: deb https://apt.kubernetes.io/ kubernetes-xenial main
   filename: kubernetes-stable
-- repo: deb [arch=amd64] https://packages.microsoft.com/ubuntu/20.04/prod focal main
+- repo: deb [arch=amd64] https://packages.microsoft.com/ubuntu/22.04/prod jammy main
   filename: microsoft-prod-deb
 - repo: ppa:mozillateam/ppa
   filename: mozillateam
-- repo: deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04 /
+- repo: deb http://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_22.04 /
   filename: palemoon
 - repo: ppa:remmina-ppa-team/remmina-next
   filename: remmina-next
-- repo: ppa:shutter/ppa
+- repo: deb https://ppa.launchpadcontent.net/shutter/ppa/ubuntu impish main
   filename: shutter-next
 - repo: ppa:ansible/ansible
   filename: ansible
-#  codename: focal
+#  codename: jammy
 - repo: ppa:ubuntu-mozilla-security/ppa
   filename: ubuntu-mozilla-security
-- repo: deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian focal contrib
+- repo: deb [arch=amd64] https://download.virtualbox.org/virtualbox/debian jammy contrib
   filename: virtualbox
 - repo: deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
   filename: vscode
-- repo: ppa:webupd8team/y-ppa-manager
+- repo: deb https://ppa.launchpadcontent.net/webupd8team/y-ppa-manager/ubuntu impish main
   filename: y-ppa-manager
 - repo: ppa:libreoffice/ppa
   filename: libreoffice
+- repo: deb https://deb.nodesource.com/node_16.x impish main
+  filename: nodesource
 repositories_optional:
  # brave browser
 - repo: deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main
-  filename: brave-browser-release-focal
+  filename: brave-browser-release-jammy
   codename: stable
 - repo: ppa:xuzhen666/dockbarx
-  codename: focal
+  codename: jammy
   filename: dockbarx
 - repo: deb http://repo.sinew.in/ stable main
   codename: stable
   filename: enpass
 - repo: ppa:danielrichter2007/grub-customizer
-  codename: xenial
+  codename: jammy
   filename: grub-customizer
-- repo: ppa:dawidd0811/neofetch
-  codename: focal
-  filename: neofetch
 - repo: ppa:noobslab/icons
   filename: noobslab-icons
   codename: eoan
 - repo: ppa:noobslab/themes
   filename: noobslab-themes
   codename: xenial
-- repo: deb http://apt.puppetlabs.com bionic puppet6
-  filename: puppet6
-  codename: bionic
+- repo: deb http://apt.puppetlabs.com jammy puppet7
+  filename: puppet7
+  codename: jammy
 - repo: deb http://repository.spotify.com stable non-free
   codename: stable
   filename: spotify
 - repo: deb https://download.sublimetext.com/ apt/stable/
   codename: stable
   filename: sublime-text
-- repo: deb https://aquasecurity.github.io/trivy-repo/deb focal main
+- repo: deb https://aquasecurity.github.io/trivy-repo/deb jammy main
   filename: trivy
-  codename: focal
-- repo: deb [arch=amd64] http://repository.veeam.com/backup/linux/agent/dpkg/debian/public stable veeam
+  codename: jammy
+- repo: deb [arch=amd64] https://repository.veeam.com/backup/linux/agent/dpkg/debian/public stable veeam
   codename: stable
-  filename: veeam
+  filename: veeam-agent
 - repo: ppa:unit193/encryption
   filename: veracrypt
-  codename: focal
-- repo: ppa:nilarimogard/webupd8
+  codename: jammy
+- repo: deb https://ppa.launchpadcontent.net/nilarimogard/webupd8/ubuntu hirsute main
   filename: webupdt
-  codename: focal
-- repo: ppa:linuxuprising/apps
+  codename: jammy
+- repo: deb https://ppa.launchpadcontent.net/linuxuprising/apps/ubuntu impish main
   filename: linuxuprising
-  codename: focal
-- repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
-  filename: teams
-  codename: focal
-- repo: deb http://apt.insync.io/mint uma non-free contrib
+  codename: impish
+# - repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
+#   filename: teams
+#   codename: jammy
+- repo: deb https://apt.insync.io/mint vanessa non-free contrib
   filename: insync
-  codename: ulyana
-- repo: deb https://dl.k6.io/deb stable main
-  filename: k6
+  codename: vanessa
+- repo: deb https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/ ./
+  filename: rancher-desktop
+  codename: stable
+- repo: deb [arch=amd64] https://downloads.k8slens.dev/apt/debian stable main
+  filename: lens
   codename: stable
 repositories_remove:
 - repo: ppa:alexx2000/doublecmd
   filename: alexx2000-doublecmd
-- repo: deb https://knqyf263.github.io/trivy-repo/deb focal main
+- repo: deb https://knqyf263.github.io/trivy-repo/deb jammy main
   filename: trivy
 - repo: ppa:ehoover/compholio
   filename: compholio
-- repo: deb [arch=amd64] http://repo.fortinet.com/repo/ubuntu/ /focal multiverse
+- repo: deb [arch=amd64] http://repo.fortinet.com/repo/ubuntu/ /xenial multiverse
   filename: forticlient
-  codename: focal
+  codename: xenial
 - repo: deb https://packagecloud.io/github/git-lfs/linuxmint/ ulyana main
-  filename: github_git-lfs,
-- repo: ppa:ubuntuhandbook1/shutter
-  filename: shutter
+  filename: github_git-lfs
 - repo: ppa:synapse-core/testing
   filename: synapse-core
-- repo: ppa:linuxuprising/shutter
-  filename: shutter
 - repo: deb http://apt.puppetlabs.com bionic puppet5
   filename: puppet5
   codename: bionic
 - repo: deb [arch=amd64] https://repo.skype.com/deb stable main
   codename: stable
   filename: skype-stable
+- repo: ppa:dawidd0811/neofetch
+  codename: jammy
+  filename: neofetch
+- repo: deb https://dl.k6.io/deb stable main
+  filename: k6
+  codename: stable
+- repo: deb http://apt.puppetlabs.com bionic puppet6
+  filename: puppet6
+  codename: bionic
+- repo: deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main
+  filename: teams
+  codename: jammy
 files_remove:
 - path: /etc/apt/sources.list.d/shutter.list
+- path: /etc/apt/sources.list.d/veeam.list
+- path: /etc/apt/sources.list.d/neofetch.list
+- path: /etc/apt/sources.list.d/yubico-stable-foca.list
+- path: /etc/apt/sources.list.d/teams.list
 keys:
-- https://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_20.04/Release.key
-- https://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_20.04/Release.key
+- https://download.opensuse.org/repositories/home:/stevenpusser/xUbuntu_22.04/Release.key
+- https://download.opensuse.org/repositories/home:/Alexx2000/xUbuntu_22.04/Release.key
 - https://packages.microsoft.com/keys/microsoft.asc
 - https://dl-ssl.google.com/linux/linux_signing_key.pub
 - https://packages.cloud.google.com/apt/doc/apt-key.gpg
@@ -140,24 +150,44 @@ keys:
 - http://repository.veeam.com/keys/veeam.gpg
 - https://packagecloud.io/github/git-lfs/gpgkey
 - https://apt.puppetlabs.com/pubkey.gpg
-- https://packagecloud.io/asbru-cm/asbru-cm/gpgkey
 - https://aquasecurity.github.io/trivy-repo/deb/public.key
 - https://brave-browser-apt-release.s3.brave.com/brave-core.asc
-- https://download.spotify.com/debian/pubkey_0D811D58.gpg
+- https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg
 - https://d2t3ff60b2tol4.cloudfront.net/repomd.xml.key
+- https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+- https://zoom.us/linux/download/pubkey
+- https://download.opensuse.org/repositories/isv:/Rancher:/stable/deb/Release.key
+- https://downloads.k8slens.dev/keys/gpg
 keys_keyserver:
 - keyserver: keyserver.ubuntu.com
   id: ACCAF35C
   # k6 repo
 - keyserver: keyserver.ubuntu.com
   id: C5AD17C747E3415A3642D57D77C6C491D6AC1D69
-  # forticlient
+#   # forticlient
+# - keyserver: keyserver.ubuntu.com
+#   id: 18AC26395E54716D
+  # linux uprising
 - keyserver: keyserver.ubuntu.com
-  id: 18AC26395E54716D
+  id: EA8CACC073C3DB2A
+  # Shutter PPA
+- keyserver: keyserver.ubuntu.com
+  id: FC6D7D9D009ED615
+  # Webupdt8 PPA
+- keyserver: keyserver.ubuntu.com
+  id: 531EE72F4C9D234C
+  # Webupdt8 y-ppa-manager
+- keyserver: keyserver.ubuntu.com
+  id: C2518248EEA14886
+  # lens
+- keyserver: keyserver.ubuntu.com
+  id: 666A7D882011D3CE
 keys_remove:
 - 5E54716D
+- 5E3C45D7B312C643
+- 264E114C6911D08D3BA6CE6C18AC26395E54716D
 packages_remove:
-- ansible
+- ansible-base
 - kontena-lens
 - skypeforlinux
 - openjdk-8-jdk
@@ -169,20 +199,33 @@ packages_remove:
 - openjdk-13-jdk
 - openjdk-13-jre
 - openjdk-13-headless
-packages_essential:
+- openjdk-17-jdk
+- openjdk-17-jre
+- openjdk-17-headless
+- openjdk-18-jdk
+- openjdk-18-jre
+- openjdk-18-headless
+- zenmap
+- balena-etcher-electron
+- teams
+packages_clean_system:
 - apt-transport-https
-- mc
-- dkms
-- gcc
-- dotnet-sdk-3.1
-- dotnet-runtime-3.1
+- ca-certificates
+packages_essential:
 - build-essential
-- mint-meta-codecs
+- dkms
+- dotnet-runtime-7.0
+- dotnet-sdk-7.0
+- gcc
 - libvte-dev
+- mc
+- mint-meta-codecs
+- pv
 - xz-utils
 packages:
 - synaptic
-- ansible-base
+- ansible
+- ansible-core
 - azure-cli
 - google-cloud-sdk
 - gcsfuse
@@ -206,10 +249,6 @@ packages:
 - python3-wheel
 - python3-gpg
 - python3-psutil
-- python-dbus
-- python-dev
-- python-psutil
-- python-cairo
 - diodon
 - doublecmd-gtk
 - htop
@@ -230,7 +269,6 @@ packages:
 - ndiff
 - extlinux
 - syslinux
-- unetbootin-translations
 - va-driver-all
 - p7zip-rar
 - chromium-codecs-ffmpeg-extra
@@ -248,14 +286,14 @@ packages:
 - keepass2
 - smartmontools
 - libqt5multimedia5-plugins
-- openjdk-16-jre
-- openjdk-16-jdk
-- openjdk-16-jre-headless
+- openjdk-19-jre
+- openjdk-19-jdk
+- openjdk-19-jre-headless
 - gsmartcontrol
 - nmon
 - sysstat
 - stress
-- npm
+- nodejs
 - unzip
 - docker-ce
 - shutter
@@ -269,7 +307,6 @@ packages:
 - network-manager-vpnc
 - network-manager-openconnect
 - redshift-gtk
-- asbru-cm
 - iperf3
 - traceroute
 - nfs-common
@@ -301,14 +338,14 @@ packages:
 - moreutils
 packages_optional:
 - enpass
-- pdk
+# missing 2023-01
+#- pdk
 - puppet-agent
 - kodi
 - dockbarx
 - grub-customizer
-- unetbootin
-- adobe-flashplugin
-- adobe-flash-properties-gtk
+#- adobe-flashplugin
+#- adobe-flash-properties-gtk
 - gimp
 - vlc
 - kazam
@@ -327,32 +364,35 @@ packages_optional:
 - isomaster
 - brave-browser
 - tlpui
-- teams
 - goaccess
 - hashcat
 - y-ppa-manager
 - insync
-- k6
+- rancher-desktop
+- lens
 deb:
-- https://github.com/angryip/ipscan/releases/download/3.7.6/ipscan_3.7.6_amd64.deb
+- https://github.com/angryip/ipscan/releases/download/3.9.1/ipscan_3.9.1_amd64.deb
 - https://release.axocdn.com/linux/gitkraken-amd64.deb
-- https://releases.hashicorp.com/vagrant/2.2.18/vagrant_2.2.18_x86_64.deb
-- https://github.com/BoostIO/boost-releases/releases/download/v0.16.1/boostnote_0.16.1_amd64.deb
-- https://github.com/Eugeny/tabby/releases/download/v1.0.158/tabby-1.0.158-linux.deb
-- https://github.com/TheGoddessInari/hamsket/releases/download/nightly/hamsket_0.6.3_amd64.deb
-- https://github.com/kubernetes/minikube/releases/download/v1.23.2/minikube_1.23.2-0_amd64.deb
-- https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/10702/wps-office_11.1.0.10702.XA_amd64.deb
-- https://github.com/wagoodman/dive/releases/download/v0.10.0/dive_0.10.0_linux_amd64.deb
-- https://github.com/balena-io/etcher/releases/download/v1.6.0/balena-etcher-electron_1.6.0_amd64.deb
-- https://github.com/goodwithtech/dockle/releases/download/v0.4.2/dockle_0.4.2_Linux-64bit.deb
-- http://archive.ubuntu.com/ubuntu/pool/universe/p/pygtk/python-gtk2_2.24.0-5.1ubuntu2_amd64.deb
-- https://github.com/kaikramer/keystore-explorer/releases/download/v5.4.4/kse_5.4.4_all.deb
-- http://archive.ubuntu.com/ubuntu/pool/universe/n/nmap/zenmap_7.60-1ubuntu5_all.deb
-- https://downloads.raspberrypi.org/imager/imager_1.6.2_amd64.deb
-- https://lens-binaries.s3-eu-west-1.amazonaws.com/ide/Lens-5.2.4-latest.20210923.1.amd64.deb
-- https://github.com/aquasecurity/kube-bench/releases/download/v0.6.3/kube-bench_0.6.3_linux_amd64.deb
+- https://releases.hashicorp.com/vagrant/2.3.7/vagrant_2.3.7-1_i686.deb
+- https://github.com/Eugeny/tabby/releases/download/v1.0.197/tabby-1.0.197-linux-x64.deb
+- https://github.com/kubernetes/minikube/releases/download/v1.30.1/minikube_1.30.1-0_amd64.deb
+- https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/11664/wps-office_11.1.0.11664.XA_amd64.deb
+- https://github.com/wagoodman/dive/releases/download/v0.11.0/dive_0.11.0_linux_amd64.deb
+- https://github.com/balena-io/etcher/releases/download/v1.18.8/balena-etcher_1.18.8_amd64.deb
+- https://github.com/goodwithtech/dockle/releases/download/v0.4.11/dockle_0.4.11_Linux-64bit.deb
+- https://github.com/kaikramer/keystore-explorer/releases/download/v5.5.2/kse_5.5.2_all.deb
+- https://downloads.raspberrypi.org/imager/imager_1.7.5_amd64.deb
+- https://github.com/aquasecurity/kube-bench/releases/download/v0.6.15/kube-bench_0.6.15_linux_amd64.deb
+- https://github.com/anchore/syft/releases/download/v0.84.1/syft_0.84.1_linux_amd64.deb
+- https://cdn.zoom.us/prod/5.15.2.4260/zoom_amd64.deb
+- https://github.com/turbot/steampipe/releases/download/v0.20.8/steampipe_linux_amd64.deb
+- https://github.com/ramboxapp/download/releases/download/v2.1.4/Rambox-2.1.4-linux-x64.deb
 flatpak:
 - name: https://flathub.org/repo/appstream/com.getpostman.Postman.flatpakref
+- name: https://dl.flathub.org/repo/appstream/md.obsidian.Obsidian.flatpakref
+- name: https://dl.flathub.org/repo/appstream/com.github.wwmm.easyeffects.flatpakref
+- name: zenmap
+- name: com.bitwarden.desktop
 npm:
 - name: agentkeepalive
   state: latest
@@ -363,7 +403,7 @@ npm:
 pip_executable: pip3
 pip:
 - pip
-- psutil
+#- psutil
 - s-tui
 - pywinrm[kerberos]
 - requests-kerberos
@@ -378,38 +418,40 @@ pip:
 - gittyleaks
 - kube-hunter
 - pipdeptree
+- oci-cli
+- terraform-compliance
 unpack:
-- url: https://get.helm.sh/helm-v3.7.0-linux-amd64.tar.gz
+- url: https://get.helm.sh/helm-v3.12.1-linux-amd64.tar.gz
   destination: helm
   source: helm
   destination_file: helm3.tar.gz
   folder: linux-amd64
-- url: https://github.com/OWASP/Amass/releases/download/v3.13.4/amass_linux_amd64.zip
+- url: https://github.com/OWASP/Amass/releases/download/v3.23.2/amass_linux_amd64.zip
   destination: amass
   source: amass
-  folder: amass_linux_amd64
+  folder: amass_Linux_amd64
   destination_file: amass.zip
-- url: https://github.com/yannh/kubeconform/releases/download/v0.4.11/kubeconform-linux-amd64.tar.gz
+- url: https://github.com/yannh/kubeconform/releases/download/v0.6.2/kubeconform-linux-amd64.tar.gz
   destination: kubeconform
   source: kubeconform
   folder:
   destination_file: kubeconform-linux-amd64.tar.gz
-- url: https://releases.hashicorp.com/packer/1.7.5/packer_1.7.5_linux_amd64.zip
+- url: https://releases.hashicorp.com/packer/1.9.1/packer_1.9.1_linux_amd64.zip
   destination: packer
   source: packer
   destination_file: packer.zip
   folder:
-- url: https://releases.hashicorp.com/terraform/1.0.7/terraform_1.0.7_linux_amd64.zip
+- url: https://releases.hashicorp.com/terraform/1.5.2/terraform_1.5.2_linux_amd64.zip
   destination: terraform
   source: terraform
   destination_file: terraform.zip
   folder:
-- url: https://releases.hashicorp.com/vault/1.8.2/vault_1.8.2_linux_amd64.zip
+- url: https://releases.hashicorp.com/vault/1.14.0/vault_1.14.0_linux_amd64.zip
   destination: vault
   source: vault
   destination_file: vault.zip
   folder:
-- url: https://github.com/terraform-linters/tflint/releases/download/v0.32.1/tflint_linux_amd64.zip
+- url: https://github.com/terraform-linters/tflint/releases/download/v0.47.0/tflint_linux_amd64.zip
   destination: tflint
   source: tflint
   destination_file: tflint.zip
@@ -419,46 +461,96 @@ unpack:
   source: ngrok
   destination_file: ngrok-stable-linux-amd64.zip
   folder:
+- url: https://github.com/kastenhq/kubestr/releases/download/v0.4.37/kubestr_0.4.37_Linux_amd64.tar.gz
+  destination: kubestr
+  source: kubestr
+  destination_file: kubestr.tar.gz
+  folder:
+- url: https://github.com/kubernetes-sigs/krew/releases/download/v0.4.3/krew-linux_amd64.tar.gz
+  destination: krew
+  source: krew-linux_amd64
+  destination_file: krew-linux_amd64.tar.gz
+  folder:
+- url: https://github.com/containerd/nerdctl/releases/download/v1.4.0/nerdctl-1.4.0-linux-amd64.tar.gz
+  destination: nerdctl
+  source: nerdctl
+  destination_file: nerdctl-linux-amd64.tar.gz
+  folder:
+- url: https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2Fv5.1.0/kustomize_v5.1.0_linux_amd64.tar.gz
+  destination: kustomize
+  source: kustomize
+  destination_file: kustomize.tar.gz
+  folder:
+- url: https://github.com/derailed/k9s/releases/download/v0.27.4/k9s_Linux_amd64.tar.gz
+  destination: k9s
+  source: k9s
+  destination_file: k9s.tar.gz
+  folder:
+- url: https://github.com/doitintl/kube-no-trouble/releases/download/nightly-0.7.0-33-gdf9a017/kubent-nightly-0.7.0-33-gdf9a017-linux-amd64.tar.gz
+  destination: kubent
+  source: kubent
+  destination_file: kubent.tar.gz
+  folder:
+- url: https://github.com/datreeio/datree/releases/download/1.9.10/datree-cli_1.9.10_Linux_x86_64.zip
+  destination: datree
+  source: datree
+  destination_file: datree.zip
+  folder:
 downloads:
 - url: https://github.com/ffuf/ffuf/releases/download/v1.0.2/ffuf_1.0.2_linux_amd64.tar.gz
   destination: ffluf
   skip_tree: false
-- url: https://github.com/FairwindsOps/polaris/releases/download/4.1.0/polaris_linux_amd64.tar.gz
+- url: https://github.com/FairwindsOps/polaris/releases/download/8.3.0/polaris_linux_amd64.tar.gz
   destination: polaris
   skip_tree: false
-- url: https://github.com/orf/gping/releases/download/gping-v1.2.5/gping-Linux-x86_64.tar.gz
+- url: https://github.com/orf/gping/releases/download/gping-v1.13.1/gping-Linux-x86_64.tar.gz
   destination: gping
   skip_tree: false
 files:
-- url: https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64
+- url: https://github.com/docker/compose/releases/download/v2.19.1/docker-compose-linux-x86_64
   destination: docker-compose
-- url: https://github.com/bcicen/ctop/releases/download/0.7.6/ctop-0.7.6-linux-amd64
+- url: https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64
   destination: ctop
-- url: https://github.com/rancher/rke/releases/download/v1.3.1/rke_linux-amd64
+- url: https://github.com/rancher/rke/releases/download/v1.4.7/rke_linux-amd64
   destination: rke
-- url: https://github.com/dannagle/PacketSender/releases/download/v7.0.5/PacketSender_v7.0.5.AppImage
+- url: https://github.com/dannagle/PacketSender/releases/download/v7.2.3/Packet_Sender-v7.2.4.AppImage
   destination: packetsender
   desktop_file: ./files/apps/packetsender/packetsender.desktop
-- url: https://github.com/k3s-io/k3s/releases/download/v1.21.5%2Bk3s1/k3s
+- url: https://github.com/k3s-io/k3s/releases/download/v1.25.11%2Bk3s1/k3s
   destination: k3s
-- url: https://github.com/rancher/k3d/releases/download/v4.4.8/k3d-linux-amd64
+- url: https://github.com/k3d-io/k3d/releases/download/v5.5.1/k3d-linux-amd64
   destination: k3d
-- url: https://github.com/hadolint/hadolint/releases/download/v2.7.0/hadolint-Linux-x86_64
+- url: https://github.com/hadolint/hadolint/releases/download/v2.12.0/hadolint-Linux-x86_64
   destination: hadolint
-- url: https://github.com/gruntwork-io/terragrunt/releases/download/v0.32.4/terragrunt_linux_amd64
+- url: https://github.com/gruntwork-io/terragrunt/releases/download/v0.42.5/terragrunt_linux_amd64
   destination: terragrunt
+- url: https://github.com/Azure/bicep/releases/latest/download/bicep-linux-x64
+  destination: bicep
+- url: https://github.com/aquasecurity/tfsec/releases/download/v1.28.1/tfsec-linux-amd64
+  destination: tfsec
+- url: https://github.com/alexellis/k3sup/releases/download/0.12.13/k3sup
+  destination: k3sup
+- url: https://github.com/argoproj/argo-cd/releases/download/v2.7.7/argocd-linux-amd64
+  destination: argocd
 ansible:
   cfg: /etc/ansible/ansible.cfg
   config:
   - section: defaults
+    option: callbacks_whitelist
+    value: timer,mail,profile_tasks
+    state: absent
+  - section: defaults
     option: host_key_checking
     value: false
+    state: present
   - section: defaults
     option: retry_file_enable
     value: false
+    state: present
   - section: defaults
-    option: callback_whitelist
+    option: callbacks_enabled
     value: timer,mail,profile_tasks
+    state: present
 startup:
 - filename: redshift-gtk.desktop
   source: ./files/apps/redshift-gtk/redshift-gtk.desktop
@@ -474,6 +566,9 @@ startup:
   source: ./files/apps/remmina/remmina-applet.desktop
 - filename: diodon.desktop
   source: ./files/apps/diodon/diodon.desktop
+- filename: easyeffects.desktop
+  source: ./files/apps/easyeffects/easyeffects.desktop
+
 services:
 - ssh
 - docker
@@ -508,51 +603,70 @@ dconf:
 timezone: Europe/Warsaw
 vscode_obsolete:
 - ms-vscode.go
+- ms-vsliveshare.vsliveshare-pack
+- ms-vsliveshare.vsliveshare-audio
 - hypnoes.word-count
 - vscoss.vscode-ansible
+- wholroyd.HCL
 vscode:
 - alefragnani.project-manager
+- AquaSecurityOfficial.trivy-vulnerability-scanner
+- bierner.markdown-mermaid
 - DavidAnson.vscode-markdownlint
+- donjayamanne.githistory
 - DotJoshJohnson.xml
+- eamodio.gitlens
+- ecmel.vscode-html-css
 - emmanuelbeziat.vscode-great-icons
 - eriklynd.json-tools
 - exiasr.hadolint
 - florianloch.text-transform
 - formulahendry.docker-explorer
 - gep13.chocolatey-vscode
+- github.vscode-github-actions
+- GitLab.gitlab-workflow
 - golang.go
+- hashicorp.hcl
 - hashicorp.terraform
 - huntertran.auto-markdown-toc
+- Kelvin.vscode-sshfs
 - marcostazi.VS-code-vagrantfile
 - medo64.render-crlf
 - mohsen1.prettify-json
 - ms-azuretools.vscode-azureterraform
+- ms-azuretools.vscode-bicep
 - ms-azuretools.vscode-docker
+- ms-dotnettools.vscode-dotnet-runtime
 - ms-kubernetes-tools.vscode-kubernetes-tools
+- ms-python.isort
 - ms-python.python
+- ms-python.vscode-pylance
 - ms-vscode-remote.remote-containers
 - ms-vscode-remote.remote-ssh
+- ms-vscode.remote-server
 - ms-vscode-remote.remote-ssh-edit
 - ms-vscode-remote.remote-wsl
 - ms-vscode-remote.vscode-remote-extensionpack
 - ms-vscode.azure-account
 - ms-vscode.azurecli
 - ms-vscode.powershell
+- ms-vscode.remote-explorer
 - ms-vscode.wordcount
 - ms-vsliveshare.vsliveshare
-- ms-vsliveshare.vsliveshare-audio
-- ms-vsliveshare.vsliveshare-pack
-- p1c2u.docker-compose
 - nhoizey.gremlins
+- p1c2u.docker-compose
 - PascalReitermann93.vscode-yaml-sort
 - piotrpalarz.vscode-gitignore-generator
 - puppet.puppet-vscode
 - rebornix.ruby
+- redhat.java
+- redhat.vscode-commons
 - redhat.vscode-yaml
+- rogalmic.bash-debug
 - shardulm94.trailing-spaces
 - tht13.html-preview-vscode
+- Tim-Koehler.helm-intellisense
 - timonwong.shellcheck
-- wholroyd.HCL
 - wholroyd.jinja
 - yzane.markdown-pdf
 sysctl:
